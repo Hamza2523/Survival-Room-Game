@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- UI -->
+        <div id="ui-container">
+            <div class="ui-element">
+                <!-- Health Icon -->
+                <svg viewBox="0 0 24 24" fill="#ff0000"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <div id="health-bar-container">
+                    <div id="health-bar"></div>
+                </div>
+            </div>
+            <div class="ui-element">
+                <!-- Weapon Slots -->
+                <div id="weapon-1" class="weapon-slot active">
+                    <!-- Gun Icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.59,11.59l-5.04,5.04L15.1,15.17l5.04-5.04L21.59,11.59z M17.22,4.88l-2.12-2.12L3,14.84V19h4.16L17.22,4.88z M8.5,17H6v-2.5L13.5,7L16,9.5L8.5,17z"/></svg>
+                </div>
+                <div id="weapon-2" class="weapon-slot">
+                    <!-- Axe Icon -->
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.94,4.21c.21-.21,.46-.32,.71-.32c.53,0,1.04,.41,1.04,1.04c0,.25-.12,.5-.32,.71L5.91,14.09l-1.06,1.06l-2.12,2.12l2.12,2.12l2.12-2.12l1.06-1.06l8.48-8.48c.21-.21,.32-.46,.32-.71c0-.53-.41-1.04-1.04-1.04c-.25,0-.5,.12-.71,.32l-2.47,2.47l-2.12-2.12L12.94,4.21z M20,13c0-3.87-3.13-7-7-7H9.82l2.47,2.47l-2.12,2.12L7.7,8.12V13c0,2.76,2.24,5,5,5s5-2.24,5-5z"/></svg>
+                </div>
+            </div>
+            <div id="ammo-count" class="ui-element">15 / 15</div>
+        </div>
+
+        <div id="top-ui-container">
+            <div id="info-container">
+                <div id="wave-counter">Wave: 1</div>
+                <div id="score-counter">Score: 0</div>
+            </div>
+            <div id="pause-button">
+                <svg id="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                <svg id="play-icon" class="hidden" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-container">
+            <h1>Survival Room</h1>
+            <ul id="instructions">
+                <li><strong>Controls</strong>: WASD to Move</li>
+                <li><strong>Aim</strong>: Mouse</li>
+                <li><strong>Attack</strong>: Left Click</li>
+                <li><strong>Switch Weapon</strong>: 1, 2, or Scroll Wheel</li>
+                <li><strong>Reload</strong>: R</li>
+                <li><strong>Pause</strong>: P or Pause Button</li>
+                <li class="warning">Watch out for bombs starting on Wave 2!</li>
+            </ul>
+            <button id="start-button">Start Game</button>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="hidden overlay-container">
+            <h1 id="game-over-title">YOU DIED</h1>
+            <p id="final-score">Your Score: 0</p>
+            <p id="taunt-text" class="taunt"></p>
+            <button id="restart-button">Try Again</button>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pause-screen" class="hidden overlay-container">
+            <h1>PAUSED</h1>
+            <button id="resume-button">Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

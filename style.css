@@ -1,0 +1,223 @@
+/* --- Basic Setup --- */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* --- Game Container --- */
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1200px;
+    max-height: 800px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+    border: 3px solid #444;
+    background-color: #2a2a2a;
+    overflow: hidden; /* Ensures nothing spills out */
+}
+
+/* --- Game Canvas --- */
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #3d3d3d;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* --- UI Elements --- */
+#ui-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    border: 2px solid #555;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    user-select: none;
+}
+
+.ui-element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.ui-element svg {
+    width: 28px;
+    height: 28px;
+}
+
+#health-bar-container {
+    width: 150px;
+    height: 20px;
+    background-color: #4d0000;
+    border-radius: 5px;
+    border: 1px solid #ff4d4d;
+    overflow: hidden;
+}
+
+#health-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    transition: width 0.2s ease-in-out;
+}
+
+/* --- Weapon Slots --- */
+.weapon-slot {
+    padding: 8px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.weapon-slot.active {
+    border-color: #ff4500;
+    background-color: rgba(255, 69, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.weapon-slot svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+/* --- Info & Pause --- */
+#top-ui-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none; /* Container doesn't block clicks */
+}
+
+#info-container {
+    font-size: 1.5em;
+    font-family: 'Creepster', cursive;
+    color: #ff4500;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#pause-button {
+    pointer-events: all; /* Button is clickable */
+    cursor: pointer;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid #888;
+    transition: all 0.2s ease;
+}
+#pause-button:hover {
+    background: rgba(255, 69, 0, 0.5);
+    border-color: #ff4500;
+}
+#pause-button svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    display: block;
+}
+
+/* --- Game Over / Start / Pause Screen --- */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay-container h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 6em;
+    color: #ff0000;
+    margin: 0;
+    text-shadow: 4px 4px 8px #000;
+}
+
+.overlay-container p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+#instructions {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 450px;
+}
+#instructions strong {
+    color: #ff4500;
+    display: inline-block;
+    width: 150px;
+}
+#instructions .warning {
+    color: #ffc107;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.taunt {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #aaa;
+    margin: 0 40px 20px 40px;
+    max-width: 600px;
+}
+
+.overlay-container button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    background: #ff4500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-container button:hover {
+    background: #e03e00;
+    transform: translateY(-2px);
+}
+
+.hidden {
+    display: none;
+}
