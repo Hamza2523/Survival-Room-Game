@@ -1,62 +1,25 @@
-# Survival Room
+Survival Room
+A top-down zombie survival game built with HTML, CSS, and JavaScript. Survive the horde for as long as you can!
 
-A fast-paced, top-down zombie survival shooter built with HTML, CSS, and vanilla JavaScript. Fight off endless hordes of zombies, utilize power-ups, and see how long you can survive in the room!
+Play the Live Demo!
+https://hamza2523.github.io/Survival-Room-Game/
 
-**[Play the Live Demo!](https://your-github-username.github.io/your-repository-name/)** *(Replace the link above with your actual GitHub Pages URL after hosting.)*
+How to Play
+Move: WASD or Arrow Keys
 
-![Gameplay Screenshot](https://placehold.co/600x400/2a2a2a/ff4500?text=Survival+Room+Gameplay)
+Aim: Mouse
 
----
+Shoot/Attack: Left-click
 
-## How to Play
+Switch Weapon: 1, 2, or Scroll Wheel
 
-The goal is to survive as long as possible against waves of zombies that grow stronger and more numerous over time.
+Reload: R
 
-* **Movement**: Use **WASD** or the **Arrow Keys** to move your character.
-* **Aim**: Your character will automatically aim at your **mouse cursor**.
-* **Attack**: **Left-click** to shoot your gun or swing your melee weapon.
-* **Switch Weapons**: Use the **1** and **2** keys or the **scroll wheel** to switch between your pistol and axe.
-* **Reload**: Press the **R** key to reload your pistol when you run out of ammo.
-* **Pause**: Press the **P** key or the pause button in the top-right corner to pause the game.
+Pause: P
 
----
+Look out for power-ups like Health Packs and Rage Packs to help you survive longer!
 
-## Features
+How to Run Locally
+Clone or download the repository.
 
-* **Endless Waves**: Face increasingly difficult waves of zombies. How many can you beat?
-* **Dual-Weapon System**: Strategically switch between a ranged pistol and a powerful melee axe.
-* **Dangerous Power-ups**:
-    * **Health Pack**: A green cross that restores you to full health. Appears for a limited time!
-    * **Rage Pack**: A yellow bullet that grants your pistol unlimited ammo and a machine-gun fire rate for 5 seconds.
-* **Environmental Hazards**: Starting from Wave 2, deadly bombs will spawn on the map. Avoid them at all costs!
-* **Dynamic UI**: Keep track of your health, ammo, current wave, and score with a clean, responsive UI.
-* **Savage Taunts**: If you die, the game will be sure to let you know how it feels about your performance.
-
----
-
-## Local Setup
-
-To run this game on your local machine, follow these simple steps:
-
-1.  **Clone the repository:**
-    ```sh
-    git clone [https://github.com/your-github-username/your-repository-name.git](https://github.com/your-github-username/your-repository-name.git)
-    ```
-
-2.  **Navigate to the project directory:**
-    ```sh
-    cd your-repository-name
-    ```
-
-3.  **Open `index.html`:**
-    Simply open the `index.html` file in any modern web browser (like Chrome, Firefox, or Edge).
-
-That's it! The game will run locally in your browser.
-
----
-
-## Technologies Used
-
-* **HTML5**: For the core structure of the game.
-* **CSS3**: For all styling, layout, and animations.
-* **JavaScript (ES6+)**: For all game logic, from player movement to zombie AI and collision detection.
+Open the index.html file in your browser.
